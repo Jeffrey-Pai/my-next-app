@@ -30,6 +30,9 @@ export default function RootLayout({
           <a href="/blog/a" className="block text-blue-500 hover:underline">
             blog
           </a>
+          <a href="/search" className="block text-blue-500 hover:underline">
+            search
+          </a>
         </div>
       </body>
     </html>
