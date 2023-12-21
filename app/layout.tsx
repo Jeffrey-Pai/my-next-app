@@ -27,6 +27,9 @@ export default function RootLayout({
           >
             register
           </a>
+          <a href="/blog/a" className="block text-blue-500 hover:underline">
+            blog
+          </a>
         </div>
       </body>
     </html>
