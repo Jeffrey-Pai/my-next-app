@@ -17,11 +17,17 @@ export default async function Page() {
   const data = await getData()
   const stockId = data.msgArray[0].c
   const stockName = data.msgArray[0].n
+  const stockHigh = data.msgArray[0].h
+  const stockLow = data.msgArray[0].l
+  const stockVol = data.msgArray[0].v
   return (
     <main>
       <div>
-        <p>{stockId}</p>
-        <p>{stockName}</p>
+        <p>股票代號:{stockId}</p>
+        <p>股票名稱:{stockName}</p>
+        <p>最高值:{stockHigh}</p>
+        <p>最低值:{stockLow}</p>
+        <p>成交量:{stockVol}</p>
       </div>
     </main>
   )
