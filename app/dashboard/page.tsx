@@ -1,6 +1,6 @@
 async function getData() {
   const res = await fetch(
-    'https://mis.twse.com.tw/stock/api/getStockInfo.jsp?json=1&delay=0&ex_ch=tse_2330.tw'
+    'https://mis.twse.com.tw/stock/api/getStockInfo.jsp?json=1&delay=0&ex_ch=tse_2317.tw'
   )
   // The return value is *not* serialized
   // You can return Date, Map, Set, etc.
