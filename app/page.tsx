@@ -1,6 +1,6 @@
 'use client'
 import Link from 'next/link'
-import Counter from '../component/counter'
+import Counter from '../components/counter'
 
 export default function Page() {
   return (
