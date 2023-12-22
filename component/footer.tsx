@@ -41,6 +41,11 @@ export default function Footer() {
                     register
                   </a>
                 </li>
+                <li className="mb-4">
+                  <a href="/" className="hover:underline">
+                    Home
+                  </a>
+                </li>
               </ul>
             </div>
             <div>
