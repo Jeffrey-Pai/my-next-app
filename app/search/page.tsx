@@ -1,11 +1,7 @@
 import Search from '../../components/search'
 
 
-export default async function IndexPage({
-  searchParams
-}: {
-  searchParams: { q: string };
-}) {
+export default async function IndexPage({searchParams}: {searchParams: { q: string };}) {
   const search = searchParams.q ?? '';
   let stockId, stockName, stockHigh, stockLow, stockVol, res ,data;
   if (search !== '') {
@@ -23,7 +19,7 @@ export default async function IndexPage({
       stockVol = data.msgArray[0].v;
     } 
     else {
-      if (search !== '') 
+      if (search !== ''&&　data.msgArray && data.msgArray.length > 0) 
       {
       res = await fetch(
         `https://mis.twse.com.tw/stock/api/getStockInfo.jsp?json=1&delay=0&ex_ch=otc_${search}.tw`
@@ -36,19 +32,19 @@ export default async function IndexPage({
       stockVol = data.msgArray[0].v;     
       }
       else {
-        stockId = '';
-        stockName = '';
-        stockHigh = '';
-        stockLow = '';
-        stockVol = '';
+        stockId = search;
+        stockName = '查無資料';
+        stockHigh = '查無資料';
+        stockLow = '查無資料';
+        stockVol = '查無資料';
       }      
     }
   } else {
-    stockId = '';
-    stockName = '';
-    stockHigh = '';
-    stockLow = '';
-    stockVol = '';
+    stockId = search;
+    stockName = '查無資料';
+    stockHigh = '查無資料';
+    stockLow = '查無資料';
+    stockVol = '查無資料';
   }
   
   
